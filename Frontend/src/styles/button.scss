@@ -1,0 +1,11 @@
+.button{
+    border: none;
+    outline: none;
+    padding-inline: 1.5rem;
+    padding-block: 0.75;
+    border-radius: 1rem;
+
+    &.primary-button{
+        background-color: rgb(189, 7, 16);
+    }
+}
