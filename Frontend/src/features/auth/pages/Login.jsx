@@ -39,9 +39,11 @@ const Login =()=>{
               type="password" id="password" name="password" 
               placeholder="Enter password"/>
             </div>
-
             <button className="button primary-button">Login</button>
         </form>
+        <p className="form-link">
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
         </div>
         </main>
     )

@@ -2,9 +2,10 @@
     border: none;
     outline: none;
     padding-inline: 1.5rem;
-    padding-block: 0.75;
+    padding-block: 0.75rem;
     border-radius: 1rem;
-
+    color: whitesmoke;
+    margin-top: 10px; /* 👈 adds gap above button */
     &.primary-button{
         background-color: rgb(189, 7, 16);
     }

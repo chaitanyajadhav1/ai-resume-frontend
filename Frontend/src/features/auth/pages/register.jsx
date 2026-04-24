@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {useNavigate} from "react-router";
+import {useNavigate, Link} from "react-router";
 import { useAuth } from "../hooks/useAuth";
 
 const Register =()=>{
@@ -13,7 +13,7 @@ const Register =()=>{
 
 
 
-    const handleSubmi=async (e)=>{
+    const handleSubmit=async (e)=>{
      e.preventDefault()
      await handleRegister({username,email,password})
      navigate('/')
@@ -24,6 +24,14 @@ const Register =()=>{
         <h1>Register</h1>
 
         <form onSubmit={handleSubmit}>
+            <div className="input-group">
+              <label htmlFor="username">Username</label>
+              <input 
+              onChange={(e)=>{setUsername(e.target.value)}}
+              type="text" id="username" name="username" 
+              placeholder="Enter username"/>
+            </div>
+
             <div className="input-group">
               <label htmlFor="email">Email</label>
               <input 
@@ -42,6 +50,9 @@ const Register =()=>{
 
             <button className="button primary-button">Register</button>
         </form>
+        <p className="form-link">
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
         </div>
         </main>
     )
