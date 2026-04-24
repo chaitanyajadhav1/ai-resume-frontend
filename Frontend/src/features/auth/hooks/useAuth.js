@@ -49,9 +49,13 @@ import { useEffect } from "react";
     
     useEffect(()=>{
         const getAndSetUser=async()=>{
-            const data=await getMe()
+            try{
+           const data=await getMe()
             setUser(data.user)
+            }catch(err){}finally{
             setLoading(false)
+            }
+          
         }
 
         getAndSetUser()
